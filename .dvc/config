@@ -1,0 +1,8 @@
+['remote "usa-ii-model-dataset-tracker"']
+    url = gs://usa-ii-model-dataset-tracker/data
+['remote "dataset-tracker"']
+    url = gs://usa-ii-model-dataset-tracker/data
+['remote "model-tracker"']
+    url = gs://usa-ii-model-dataset-tracker/model/
+['remote "model-tracker-usa"']
+    url = gs://usa-ii-model-dataset-tracker/model/
