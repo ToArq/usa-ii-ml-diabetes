@@ -4,3 +4,5 @@ venv/
 *.csv
 *.pkl
 *.joblib
+__pycach__/
+report.txt

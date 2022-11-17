@@ -1,4 +1,4 @@
 outs:
-- etag: 13c888fb1542562a1ac7341764c3f0db
-  size: 733395
+- size: 733395
   path: model.joblib
+  md5: 13c888fb1542562a1ac7341764c3f0db

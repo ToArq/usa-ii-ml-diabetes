@@ -1,4 +1,4 @@
 outs:
-- etag: e75e4c8ddd397d499e3cb5d83502f188
-  size: 19159383
+- size: 19159383
   path: diabetic_data.csv
+  md5: e75e4c8ddd397d499e3cb5d83502f188
