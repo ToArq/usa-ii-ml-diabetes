@@ -39,8 +39,6 @@ db = db.drop(columns=["encounter_id","patient_nbr",'discharge_disposition_id',
 
 db = db.replace({"No":0,"Down":0, "Steady":1, "Up":1, "Ch":1,"NO":0, "<30":1, ">30":1, "Yes": 1})
 
-db = db.drop(columns=)
-
 logger.info('creating full dataset...')
 data_prepared = db
 data_prepared.to_csv('dataset/data_prepared.csv')
