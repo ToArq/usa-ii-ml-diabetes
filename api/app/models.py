@@ -5,6 +5,7 @@ class PredictionRequest(BaseModel):
     gender:  str
     age: str
     weight:  str
+    admission_type_id: int
     time_in_hospital:  int
     num_lab_procedures:  int
     num_procedures:  int
@@ -21,8 +22,6 @@ class PredictionRequest(BaseModel):
     glyburide:  int
     pioglitazone:  int
     rosiglitazone: int
-    insulin:  int
-    change:  int
     diabetesMed: int
 
 class PredictionResponse(BaseModel):
