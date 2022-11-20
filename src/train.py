@@ -103,7 +103,6 @@ final_pipeline = Pipeline(
 logger.info('Setting results...')
 results = cross_validate(final_pipeline,X_train,y_train,
                         cv=10, return_train_score=True,
-                        #scoring=['accuracy', 'f1', 'precision', 'recall'])
                         scoring=['accuracy', 'f1', 'precision', 'recall'])
 
 accuracy_train_score = results['train_accuracy'].mean()

@@ -1,8 +1,8 @@
 venv/
 .ipynb_checkpoints/
-*.json
 *.csv
 *.pkl
 *.joblib
 __pycache__/
 report.txt
+.pytest_cache/

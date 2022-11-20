@@ -22,7 +22,6 @@ class PredictionRequest(BaseModel):
     glyburide:  int
     pioglitazone:  int
     rosiglitazone: int
-    diabetesMed: int
 
 class PredictionResponse(BaseModel):
     readmitted: int

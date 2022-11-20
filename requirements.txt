@@ -1,0 +1,12 @@
+pandas
+scikit-learn
+matplotlib
+seaborn
+numpy
+dvc
+dvc[gs]
+
+fastapi
+uvicorn == 0.15.0
+gunicorn == 20
+joblib
