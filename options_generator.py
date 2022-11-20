@@ -24,10 +24,7 @@ options = {'race': ['Caucasian', 'AfricanAmerican', 'Other', 'Asian'],
  'glipizide': [0, 1],
  'glyburide': [0, 1],
  'pioglitazone': [0, 1],
- 'rosiglitazone': [0, 1],
- 'insulin': [0, 1],
- 'change': [0, 1],
- 'diabetesMed': [0, 1]}
+ 'rosiglitazone': [0, 1]}
 
 random_option = {}
 

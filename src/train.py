@@ -16,6 +16,7 @@ from sklearn.preprocessing import StandardScaler, RobustScaler, MinMaxScaler
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.linear_model import LogisticRegression
 
 #Hyperparameter tunning
 from sklearn.model_selection import GridSearchCV
@@ -59,8 +60,8 @@ categorical_pipeline = Pipeline(
 
 column_transformer = ColumnTransformer(
     [
-        ('numeric pipeline', numeric_pipeline,[4,5,6,7,8,9,10,11,14,15,16,17,18,19,20,21,22]),
-        ('categorical pipeline', categorical_pipeline,[0,1,2,3,12,13])
+        ('numeric pipeline', numeric_pipeline,[4,5,6,7,8,9,10,11,12,15,16,17,18,19,20]),
+        ('categorical pipeline', categorical_pipeline,[0,1,2,3,13,14])
     ]
 )
 
@@ -70,12 +71,12 @@ train, test = train_test_split(data, test_size=0.3,
                                random_state=42,
                               stratify=data['readmitted'])
 
-features = [['race', 'gender', 'age', 'weight',
+features = [['race', 'gender', 'age', 'weight', 'admission_type_id',
        'time_in_hospital', 'num_lab_procedures', 'num_procedures',
        'num_medications', 'number_outpatient', 'number_emergency',
        'number_inpatient', 'number_diagnoses', 'max_glu_serum', 'A1Cresult',
        'metformin', 'glimepiride', 'glipizide', 'glyburide', 'pioglitazone',
-       'rosiglitazone', 'insulin', 'change', 'diabetesMed']]
+       'rosiglitazone']]
 
 #Train
 train = train.dropna()
@@ -90,19 +91,18 @@ y_test = test['readmitted']
 X_test = X_test.dropna()
 
 
-logger.info('Setting model...')
+logger.info('Setting Logistic Regression model...')
 
 final_pipeline = Pipeline(
     [
         ('preprocesamiento', column_transformer),
-        ('modelo',SVC(C=1.0,kernel='rbf'))
+        ('modelo',LogisticRegression(max_iter=1000))
     ]
 )
 
 logger.info('Setting results...')
 results = cross_validate(final_pipeline,X_train,y_train,
                         cv=10, return_train_score=True,
-                        #scoring=['accuracy', 'f1', 'precision', 'recall'])
                         scoring=['accuracy', 'f1', 'precision', 'recall'])
 
 accuracy_train_score = results['train_accuracy'].mean()
