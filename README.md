@@ -1,4 +1,5 @@
 # Ejercicio creación de ML pipelines y puesta en producción
+https://youtu.be/an5u8CbJScI
 
 Este es un ejercicio academico de la Maestría en Inteligencia Artificial de la universidad Sergio Arboleda el cuál consiste en poner en marcha un modelo de ML en todo el ciclo de vida del desarrollo. 
 
