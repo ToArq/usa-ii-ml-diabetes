@@ -1,0 +1,4 @@
+outs:
+- size: 5397111
+  path: diabetic_train.csv
+  md5: d0d848c4fca31d63b8e8935dbdf0c63a
